@@ -36,6 +36,8 @@ public class Application implements CommandLineRunner {
 			System.out.println("1 - Nome do Livro");
 			System.out.println("2 - para Excluir");
 			System.out.println("3 - update");
+			System.out.println("4 - consulte um nome");
+
 			int action = leitor.nextInt();
 
 			if (action == 1) {
@@ -54,6 +56,14 @@ public class Application implements CommandLineRunner {
 				livroService.upadate(leitor);
 			}
 
+			
+			
+			if (action == 4) {
+
+				livroService.consulte(leitor);
+			}
+			
+		
 			else {
 
 				system = false;
